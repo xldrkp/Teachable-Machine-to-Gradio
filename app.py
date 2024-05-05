@@ -41,7 +41,7 @@ def image_class(image):
     class_name = class_names[index]
     confidence_score = prediction[0][index]
 
-    return [class_name[2:], (float(confidence_score) * 100)]
+    return [class_name[2:], confidence_score]
 
 
 demo = gr.Interface(
@@ -53,10 +53,10 @@ demo = gr.Interface(
     ],
     flagging_options=["incorrect"],
     examples=[
-        "data/cats_test/101.jpg",
-        "data/dogs_test/111.jpg",
-        "data/cats_test/102.jpg",
-        "data/dogs_test/112.jpg",
+        "data/cats_validate/101.jpg",
+        "data/dogs_validate/111.jpg",
+        "data/cats_validate/102.jpg",
+        "data/dogs_validate/112.jpg",
     ],
     description="""
     # Verwendung eines Modells aus Teachable Machine in Gradio
