@@ -59,7 +59,7 @@ demo = gr.Interface(
         "data/dogs_validate/112.jpg",
     ],
     description="""
-    # Verwendung eines Modells aus Teachable Machine in Gradio
+    # Verwendung eines Modells aus Teachable Machine in Gradio 
     """
 )
 
